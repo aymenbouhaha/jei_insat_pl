@@ -1,0 +1,93 @@
+{
+  "article" : {
+    "endpoints" : {
+      "createArticle" : {
+        "method": "post",
+        "url" : "/article",
+        "body" : {
+          "name" : "string",
+          "description" : "string"
+        },
+        "response" : "no need to use it"
+      },
+      "getAll" : {
+        "method" : "get",
+        "url" : "/article",
+        "response": [
+          {
+            "name" : "string",
+            "description" : "string",
+            "imageData" : {
+              "type" : "Buffer",
+              "data" : "Uint8ArrayList"
+            },
+            "imageType" : "string"
+          }
+        ]
+      },
+      "getArticle" : {
+        "method": "Get",
+        "url" : "/article/{article_id}",
+        "response" :  {
+          "id" : "string",
+          "name" : "string",
+          "description" : "string",
+          "imageData" : {
+            "type" : "Buffer",
+            "data" : "Uint8ArrayList"
+          },
+          "imageType" : "string"
+        }
+
+      }
+    }
+  },
+  "don" : {
+    "endpoints" : {
+      "updateDonation" : {
+        "url" : "/don",
+        "method" : "Patch",
+        "body" : {
+          "name" : "$IN['food','money','clothes','medicines']"
+        },
+        "response" : "no need to specify it"
+      },
+      "getAll" : {
+        "url" : "/don",
+        "method" : "GET" ,
+        "response" : [
+          {
+            "_id" : "string",
+            "name" : "string",
+            "itemsNumber" : "number"
+          }
+        ]
+      }
+    }
+  },
+  "user" : {
+    "endpoints" : {
+      "login" : {
+        "method" : "POST",
+        "url" : "/user/login",
+        "body" : {
+          "email" : "string",
+          "password" : "string"
+        },
+        "response" : {
+          "token": "string"
+        }
+      },
+      "sign-up" : {
+        "method" : "Post",
+        "url": "/user/sign-up",
+        "body" : {
+          "email": "string",
+          "password" : "string",
+          "name" : "string"
+        },
+        "response" : "no need to use it"
+      }
+    }
+  }
+}

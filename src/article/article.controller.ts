@@ -20,6 +20,7 @@ export class ArticleController {
   constructor(private readonly articleService: ArticleService) {}
 
   @Post()
+  @UseGuards(JwtAuthGuard)
   @UseInterceptors(
       FileInterceptor('image', {
         fileFilter : (req, file, callback)=>{
@@ -30,7 +31,6 @@ export class ArticleController {
         },
       }),
   )
-  @UseGuards(JwtAuthGuard)
   create(@Body() createArticleDto: CreateArticleDto,@UploadedFile() image : Express.Multer.File) {
     return this.articleService.create(createArticleDto,image);
   }

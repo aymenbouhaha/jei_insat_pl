@@ -22,10 +22,10 @@ import {RequestLoggingInterceptor} from "./log.interceptor";
   controllers: [AppController],
   providers: [
       AppService,
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: RequestLoggingInterceptor,
-    }
+    // {
+    //   provide: APP_INTERCEPTOR,
+    //   useClass: RequestLoggingInterceptor,
+    // }
   ],
 })
 export class AppModule {}
