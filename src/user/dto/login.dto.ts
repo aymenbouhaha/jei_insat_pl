@@ -1,13 +1,13 @@
-import {Prop} from "@nestjs/mongoose";
+import {IsEmail, IsString} from "class-validator";
 
 
 export class LoginDto  {
 
-
-    @Prop({required : true})
+    @IsEmail()
+    @IsString()
     email : string
 
-    @Prop({required : true})
+    @IsString()
     password : string
 
 

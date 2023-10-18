@@ -14,7 +14,7 @@ import {RequestLoggingInterceptor} from "./log.interceptor";
       UserModule,
     ArticleModule,
     DonModule,
-    MongooseModule.forRoot("mongodb://localhost:27017",),
+    MongooseModule.forRoot("mongodb+srv://junior-entreprise:8Wd0RRYKjbUTWvtP@cluster0.09npplj.mongodb.net/?retryWrites=true&w=majority",),
     ConfigModule.forRoot({
       isGlobal : true
     }),
